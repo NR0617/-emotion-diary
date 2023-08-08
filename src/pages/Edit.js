@@ -6,10 +6,10 @@ const Edit = () => {
 
   const id = serchParams.get("id");
   const mode = serchParams.get("mode");
-  console.log("id :", id, "mode :", mode);
+  //console.log("id :", id, "mode :", mode);
 
   const who = serchParams.get("who");
-  console.log("who :", who);
+  //console.log("who :", who);
 
   return (
     <div>
