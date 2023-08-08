@@ -48,8 +48,6 @@ function App() {
         (a, b) => parseInt(b.id) - parseInt(a.id)
       );
       dataId.current = parseInt(diaryList[0].id + 1);
-      // console.log({ dataId: dataId, diaryList: diaryList });
-
       dispatch({ type: "INIT", data: diaryList });
     }
   }, []);

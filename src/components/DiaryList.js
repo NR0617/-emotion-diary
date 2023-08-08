@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import MyButton from "./MyButton";
 import { useNavigate } from "react-router-dom";
 import DiaryItem from "./DiaryItem";
@@ -13,7 +13,8 @@ const filterOptionList = [
   { value: "good", name: "좋은 감정만" },
   { value: "bad", name: "안좋은 감정만" },
 ];
-const ControlMenu = ({ value, onChange, optionList }) => {
+// React.memo는 고차컴포넌트를 반환
+const ControlMenu = memo(({ value, onChange, optionList }) => {
   return (
     <select
       className="ControlMenu"
@@ -27,10 +28,12 @@ const ControlMenu = ({ value, onChange, optionList }) => {
       ))}
     </select>
   );
-};
+});
 
 const DiaryList = ({ diaryList }) => {
   const navigate = useNavigate();
+
+  //setState는 useCallback이 적용되어서 나온 함수이므로 별도로 함수를 생성하지 말고 그냥 props로 내려주자
   const [sortType, setSortType] = useState("latest");
   const [filter, setFilter] = useState("all");
 
