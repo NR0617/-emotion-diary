@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { DiaryStateContext } from "../App";
 import DiaryEditor from "../components/DiaryEditor";
 
