@@ -28,9 +28,7 @@ const Edit = () => {
 
   return (
     <div>
-      <div>
-        {originData && <DiaryEditor isEdit={true} originData={originData} />}
-      </div>
+      {originData && <DiaryEditor isEdit={true} originData={originData} />}
     </div>
   );
 };

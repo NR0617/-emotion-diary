@@ -38,11 +38,11 @@ export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 
 const dummyData = [
-  { id: 1, emotion: 1, content: "오늘의일기 1번", date: 1691372061987 },
-  { id: 2, emotion: 2, content: "오늘의일기 2번", date: 1691372061988 },
-  { id: 3, emotion: 4, content: "오늘의일기 3번", date: 1691372061989 },
-  { id: 4, emotion: 3, content: "오늘의일기 4번", date: 1691372061990 },
-  { id: 5, emotion: 5, content: "오늘의일기 5번", date: 1691372061991 },
+  { id: 1, emotion: 1, content: "오늘의일기 1번", date: 1691372061887 },
+  { id: 2, emotion: 2, content: "오늘의일기 2번", date: 1691372061878 },
+  { id: 3, emotion: 4, content: "오늘의일기 3번", date: 1691372061769 },
+  { id: 4, emotion: 3, content: "오늘의일기 4번", date: 1691372061650 },
+  { id: 5, emotion: 5, content: "오늘의일기 5번", date: 1691372061531 },
 ];
 
 function App() {
