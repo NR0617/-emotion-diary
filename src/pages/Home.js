@@ -18,10 +18,14 @@ const Home = () => {
         curDate.getMonth(),
         1
       ).getTime();
+      // javascript Date객체는 날짜를 비교할 때 시, 분, 초까지 필요하다
       const lastDay = new Date(
         curDate.getFullYear(),
         curDate.getMonth() + 1,
-        0
+        0,
+        23,
+        59,
+        59
       ).getTime();
 
       setData(
