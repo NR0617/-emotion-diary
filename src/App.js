@@ -7,13 +7,6 @@ import New from "./pages/New";
 import Edit from "./pages/Edit";
 import Diary from "./pages/Diary";
 
-// firebase 설정
-// import { collection, getDocs, addDoc } from "firebase/firestore";
-// import { db } from "./firebase.config";
-
-// const listingRef = collection(db, "client");
-// const docSnap = await getDocs(listingRef);
-
 const reducer = (state, action) => {
   let newState = [];
 
@@ -47,30 +40,6 @@ export const DiaryDispatchContext = React.createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, []);
-
-  // firebase test
-  // const [listings, setListings] = useState(null);
-  // const [loading, setLoading] = useState(true);
-  // const fetchListings = async () => {
-  //   try {
-  //     const listings = [];
-
-  //     docSnap.forEach((doc) => {
-  //       listings.push({
-  //         id: doc.id,
-  //         data: doc.data(),
-  //       });
-  //     });
-  //     setListings(listings);
-  //     setLoading(false);
-  //   } catch (error) {
-  //     // error handling
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   fetchListings();
-  // }, []);
 
   useEffect(() => {
     const localData = localStorage.getItem("diary");
